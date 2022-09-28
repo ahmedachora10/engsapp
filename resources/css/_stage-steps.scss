@@ -1,0 +1,109 @@
+.stages {
+    position: relative;
+    &:before {
+        content: "";
+        background: #f7f7f7;
+        position: absolute;
+        width: calc(100% - #{$grid-gutter-width});
+        height: 5px;
+        top: (15px - 2.5px);
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .stage-step {
+        &-icon {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #f7f7f7;
+            border: 1px solid #ebecf3;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: all 400ms cubic-bezier(0.32, 0.88, 0.68, 1);
+            @media (max-width: 768px) {
+                margin-bottom: 10px;
+            }
+            &-check {
+                position: absolute;
+                width: 11.56px;
+                transform: translate(-5px, 5px) rotate(-63deg);
+                height: 8.41px;
+                top: 50%;
+                right: 50%;
+                margin-top: -6px;
+                margin-right: -4.78px;
+                transition: all 400ms cubic-bezier(0.32, 0.88, 0.68, 1);
+                opacity: 0;
+                span:nth-child(1) {
+                    position: absolute;
+                    bottom: 0px;
+                    background: #fff;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 1px;
+                }
+                span:nth-child(2) {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    background: #fff;
+                    height: 6px;
+                    border-radius: 1px;
+                    width: 2px;
+                }
+            }
+        }
+
+        &-text {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 25px;
+            white-space: nowrap;
+            transition: all 400ms cubic-bezier(0.32, 0.88, 0.68, 1);
+            color: #484b5f;
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
+        }
+
+        &.active {
+            .stage-step-icon {
+                background: #1bcf88;
+                border: 1px solid #f7f7f7;
+            }
+            .stage-step-icon-check {
+                opacity: 1;
+                transform: translate(0px, 0px) rotate(-45deg);
+            }
+        }
+        &.unactive {
+            .stage-step-icon {
+                background-color: $red;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cg id='multiply' transform='translate(0 -0.168)'%3E%3Ccircle id='Ellipse_358' data-name='Ellipse 358' cx='9.5' cy='9.5' r='9.5' transform='translate(0 0.168)' fill='%23f71a1a'/%3E%3Cg id='Group_16243' data-name='Group 16243' transform='translate(5.143 5.31)'%3E%3Crect id='Rectangle_5913' data-name='Rectangle 5913' width='2.019' height='10.303' rx='1.01' transform='translate(0.001 1.428) rotate(-45)' fill='%23fff'/%3E%3Crect id='Rectangle_5914' data-name='Rectangle 5914' width='10.303' height='2.019' rx='1.01' transform='translate(0 7.285) rotate(-45)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        &.active,
+        &.unactive {
+            .stage-step-text {
+                margin-top: -2px;
+                font-weight: 500;
+                font-size: 16px;
+                color: $body-color;
+                @media (max-width: 768px) {
+                    margin-top: 0px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

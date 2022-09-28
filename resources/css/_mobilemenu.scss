@@ -1,0 +1,155 @@
+.mobile-menu {
+    position: fixed;
+    top: 110.5px;
+    right: 0px;
+    width: 100%;
+    height: 0px;
+    transition: height 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    overflow: hidden;
+    background: rgba($color: #020621, $alpha: 0.91);
+    z-index: 100;
+    overflow-y: scroll;
+    ul.list {
+        display: block;
+        width: 100%;
+        transition: all 250ms ease-in-out;
+        opacity: 0;
+        transition-delay: 250ms;
+        visibility: hidden;
+        transform: translateY(-15px);
+        > li {
+            > a {
+                display: block;
+                padding: 21px;
+                color: white;
+                display: block;
+                text-align: center;
+                font-weight: 500;
+                line-height: 25px;
+                font-size: 16px;
+            }
+
+            border-bottom: 2px solid #42485b;
+            &:last-child {
+                border-bottom: 0px;
+            }
+        }
+    }
+
+    .iconlist {
+        width: 100%;
+
+        transition: all 250ms ease-in-out;
+        opacity: 0;
+        transition-delay: 0.5s;
+        visibility: hidden;
+    }
+    .socialicons {
+        margin: 30px auto;
+    }
+    &.active {
+        height: calc(100% - 110.5px);
+        .iconlist,
+        ul.list {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+    }
+}
+
+body {
+    &.disable-scroll {
+        height: 100%;
+        overflow-y: hidden;
+    }
+}
+
+.mainbg {
+    .mobile-menu {
+        top: 56px !important;
+        &.active {
+            height: calc(100% - 56px);
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .mobile-menu {
+        top: 56px !important;
+        &.active {
+            height: calc(100% - 56px);
+        }
+    }
+}
+
+.user-menu-mobile {
+    position: relative;
+    z-index: 22;
+    .button {
+        height: 46px !important;
+        width: 46px !important;
+    }
+    .profile-dropdown-list ul {
+        left: -47px !important;
+        top: 66px !important;
+        padding-bottom: 30px;
+    }
+
+    .profile-img-2,
+    .profile-img-2 img {
+        width: 66px;
+        height: 66px;
+    }
+
+    .chat-dropdown-list .chat-dropdown-list-container {
+        left: unset !important;
+        top: 56px !important;
+        right: -37px !important;
+    }
+
+    .notification-dropdown-list
+        .notification-dropdown-list-container
+        ul
+        li
+        a
+        .sender {
+        font-size: 13px;
+    }
+    .notification-dropdown-list .notification-dropdown-list-container ul li {
+        padding: 14px 9px;
+    }
+    .notification-dropdown-list
+        .notification-dropdown-list-container
+        ul
+        li
+        a
+        .message {
+        font-size: 12px;
+    }
+    .notification-dropdown-list .notification-dropdown-list-container {
+        width: 268px;
+        left: unset !important;
+        top: 56px !important;
+        right: -99px !important;
+    }
+}
+
+[dir="ltr"] {
+    .user-menu-mobile {
+        .profile-dropdown-list ul {
+            left: unset !important;
+            right: -47px !important;
+        }
+
+        .chat-dropdown-list .chat-dropdown-list-container {
+            right: unset !important;
+            left: -37px !important;
+        }
+
+        .notification-dropdown-list .notification-dropdown-list-container {
+            right: unset !important;
+            left: -99px !important;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.login-select .action.active {
+    color: #fff;
+    background: #224d5c;
+    -webkit-box-shadow: 0 18px 32px rgb(0 0 0 / 7%);
+    box-shadow: 0 18px 32px rgb(0 0 0 / 7%);
+}
+.login-select .action{
+    padding: 0 12px;
+    display: inline-block;
+    min-width: 120px;
+    height: 36px;
+    border-radius: 18px;
+    background: #fff;
+    -webkit-box-shadow: 0 3px 6px rgb(0 0 0 / 7%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 7%);
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    text-align: center;
+    line-height: 36px;
+    font-size: 15px;
+    color: #020621;
+    word-break: break-all;
+}
+.action_label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.action_label input:checked ~ .action {
+    color: #fff;
+    background: #224d5c;
+    -webkit-box-shadow: 0 18px 32px rgb(0 0 0 / 7%);
+    box-shadow: 0 18px 32px rgb(0 0 0 / 7%);
+}
+body{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+.form-control,.custom-select,.custom-file-label,.btn{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+
+.form-group .enNumbers::-webkit-input-placeholder,.form-group input[type=email]::-webkit-input-placeholder{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+.form-group .enNumbers:-ms-input-placeholder,.form-group input[type=email]:-ms-input-placeholder{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+.form-group .enNumbers:-moz-placeholder,.form-group .enNumbers::-moz-placeholder,.form-group input[type=email]:-moz-placeholder,.form-group input[type=email]::-moz-placeholder{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+.form-group .has-dropdown-number input::-webkit-input-placeholder{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+.form-group .has-dropdown-number input:-ms-input-placeholder{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+.form-group .has-dropdown-number input:-moz-placeholder,.form-group .has-dropdown-number input::-moz-placeholder{
+    font-family: 'Noto Sans Arabic',Samim FD-WOL, sans-serif;
+}
+.portfolio-card .BtnDelete {
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ffb5b5;
+}
+.pdf-img{
+    border: 2px solid #efefef;
+    border-radius: 14px;
+}
+
+.freelancecompany-profile-bio {
+    max-width: unset;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #848484;
+    text-align: justify;
+}

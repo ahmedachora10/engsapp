@@ -1,0 +1,162 @@
+.footer {
+    .level-1 {
+        background: #bbc8ce;
+        .p-top-66 {
+            padding-top: 66px;
+        }
+        .p-bottom-55 {
+            padding-bottom: 55px;
+        }
+        .socialicons {
+            margin-top: 30px;
+        }
+    }
+    .go-top {
+        position: absolute;
+        top: -29px;
+        left: 16px;
+
+        z-index: 10;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #fff;
+        transition: all 0.25s ease-in-out;
+        box-shadow: 0px 31px 38px rgba(0, 0, 0, 0.1);
+        &:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0px 31px 38px rgba(0, 0, 0, 0.2);
+        }
+        .arrow-container {
+            position: relative;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            width: 14px;
+            height: 7px;
+            div {
+                position: absolute;
+                left: 2px;
+                top: 1px;
+                border: 2px solid $yellow-custom-color;
+                border-width: 0 0 2px 2px;
+                width: 10px;
+                height: 10px;
+                line-height: 0;
+                font-size: 0;
+                margin-bottom: 25px;
+                -webkit-transform: rotate(135deg);
+                -ms-transform: rotate(135deg);
+                -o-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .go-top {
+            display: none !important;
+        }
+    }
+
+    $footer-links-width: 419px;
+    .footer-links {
+        margin-top: 53px;
+        @include clearfix;
+        width: 100%;
+        max-width: $footer-links-width;
+        ul {
+            float: right;
+            width: 33.3333333333%;
+            li {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                line-height: 23px;
+                font-size: 12px;
+                &:first-child {
+                    color: #617f8b;
+                    font-weight: normal;
+                }
+                a {
+                    color: #224d5c;
+                    &:hover {
+                        color: $yellow-custom-color;
+                    }
+                }
+                font-weight: 500;
+            }
+        }
+    }
+    .manasa-logo-footer {
+        margin-top: 9.5px;
+    }
+    .footer-paragraph {
+        color: #39606d;
+        font-size: 12px;
+        line-height: 19px;
+        margin-top: 23px;
+    }
+
+    .socialicons {
+        .icon {
+            #linked,
+            #twitter,
+            #insta,
+            #snapchat {
+                fill: #224d5c;
+            }
+
+            &:hover {
+                #linked,
+                #twitter,
+                #insta,
+                #snapchat {
+                    fill: $yellow-custom-color;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        .socialicons {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .level-2 {
+        margin-top: 5px;
+        .level-2-container {
+            height: 44px;
+        }
+        .copyright {
+            color: #020621;
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .level-1 {
+            .p-bottom-55 {
+                padding-top: 30px;
+            }
+        }
+        .footer-links {
+            max-width: 100%;
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+[dir="ltr"] {
+    .footer {
+        .go-top {
+            left: auto;
+            right: 16px;
+        }
+    }
+}

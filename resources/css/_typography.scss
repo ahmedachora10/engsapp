@@ -1,0 +1,27 @@
+h1 {
+    font-size: 25px;
+    line-height: 39px;
+    font-weight: bold;
+    color: $body-color;
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 31px;
+    color: $body-color;
+    font-weight: normal;
+}
+
+.text-yellow-color {
+    color: $yellow-custom-color;
+}
+p {
+    font-size: 15px;
+    line-height: 24px;
+    &.text-ebonyclay {
+        color: #282B42;
+    }
+}
